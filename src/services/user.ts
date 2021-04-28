@@ -16,3 +16,10 @@ export const login = (data: User) => {
     data: qs.stringify(data) // axios 默认发送的是 application/json 格式的数据，这里应该用x-www-form-urlencoded
   })
 }
+
+export const getUserInfo = () => {
+  return request({
+    method: 'GET',
+    url: '/front/user/getInfo'
+  })
+}
